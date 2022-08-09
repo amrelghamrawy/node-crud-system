@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./parials/title.ejs') %>
+<body>
+   <%- include('./parials/nav.ejs') %>
+    <div class="create-blog content">
+        <form action="/blogs" method="post">
+            <label for="title">blog title : </label>
+            <input type="text" name="title" id="title" required>
+            <label for="snippet">blog snippet : </label>
+            <input type="text" name="snippet" id="snippet" required>
+            <label for="body">blog body : </label>
+            <textarea name="body" id="body" required></textarea>
+            <button>submit</button>
+        </form>
+        
+    </div>
+    <%- include('./parials/footer.ejs') %>
+
+</body>
+</html>

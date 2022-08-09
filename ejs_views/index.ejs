@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./parials/title.ejs') %>
+<body>
+    <%- include('./parials/nav.ejs') %>
+
+    <div class="blog content">
+        <h2>All Blogs</h2>
+        <% if(blogs.length > 0 ) { %>
+            <% blogs.forEach(blog =>{ %>
+                <div class="blog-component">
+                    <a href="/blog/<%= blog.id %>">
+                        <h3 class="title"><%= blog.title %></h3>
+                        <p class="snippet"><%= blog.snippet %></p>
+                    </a>
+                </div>
+            <%})%>
+            <% } else { %>
+                <p>there are no blogs to display </p>
+                <% } %>
+    </div>
+    <%- include('./parials/footer.ejs') %>
+</body>
+</html>
