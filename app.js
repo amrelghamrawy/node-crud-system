@@ -1,7 +1,7 @@
 //file #6
 
 const express = require('express') 
-const morgan = require('morgan')
+// const morgan = require('morgan')
 const mongoose = require('mongoose')
 const blogRoute = require('./routes/blogRoute')
 const app = express() ; 
@@ -36,7 +36,7 @@ app.use((request , response  , next )=>{
 })
 
 // morgan 3rd party loging package 
-app.use(morgan('dev'))   // logging request 
+// app.use(morgan('dev'))   // logging request 
 
 //add static folder to be available from browser 
 app.use(express.static('public'))
